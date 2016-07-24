@@ -1,0 +1,201 @@
+% 以下のコメントはよく読んだほうが良いと思います。
+\documentclass[twocolumn,draft]{jsarticle}
+ 
+\usepackage{graphicx,color}%図版を取り込む場合は必要。
+\usepackage{okumacro}% 振り仮名を使用するときは必要。
+%
+\ifdraft
+  \def\hissu{\bgroup\color{red}}
+  \def\endhissu{\egroup}
+\else
+  \def\hissu{}
+  \def\endhissu{}
+\fi
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% ここから↓
+\pagestyle{empty}
+\advance\textheight\headheight \headheight=0pt
+\advance\textheight\headsep    \headsep=0pt
+\advance\textheight\footskip   \footskip=0pt
+\textheight=738truept
+\advance\textwidth\marginparsep \marginparsep=0pt
+\advance\textwidth\marginparwidth \marginparwidth=0pt
+\advance\textwidth\oddsidemargin \oddsidemargin=0pt
+\evensidemargin=\oddsidemargin
+\textwidth=50zw
+\advance\textwidth2zw
+\columnsep=2zw
+\topmargin=-5.4mm
+\oddsidemargin=-7.4mm
+\begin{document}
+\fontsize{10}{18}\selectfont
+% ↑ここまで変更しないほうが良いです。
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% ↓ここからが変更すべき箇所です。
+\twocolumn[%
+% 中間か最終かを記載する
+\noindent{個人報告書（最終）Personal Final Report}
+% 個々に提出日を記入する
+   \hfill{提出日 (Date) 2004/??/??}\par\vskip2zw
+\begin{center}
+%日本語のプロジェクト名
+ {\LARGE 函館版おいしいカレーの作り方プロジェクト}\par\vskip1zw
+%英語のプロジェクト名
+ {\LARGE How to Make Delicious Curry of Hakodate}\par\vskip1.5zw
+%グループ名
+ {\large 調査グループ (A)\quad Search Group (A)}\par\vskip1zw
+%学籍番号、日英の名前
+ {\large m780021\quad はこだて次郎\quad Jiro Hakodate}\par\vskip2zw
+\end{center}]%
+
+% \begin{hissu} ... \end{hissu} で囲まれている部分、
+% 必須項目でありますが、そのまま記述してはいけません。
+% 最終的には削除してもかまいませんが、コメントアウトして、
+% 原稿に残しておくと良いでしょう。
+% たとえば次のように。
+%\begin{hissu}
+%ここでグループが取組む課題の背景を簡略に記述する。
+%以下の項目を含む内容にすることが望ましい。
+%\begin{itemize}
+% \item 当該分野の現状や従来例 。
+% \item 現状における問題点。
+%\end{itemize}
+%\end{hissu}
+
+\section{背景}
+\begin{hissu}
+ここでグループが取組む課題の背景を簡略に記述する。
+以下の項目を含む内容にすることが望ましい。
+\begin{itemize}
+ \item 当該分野の現状や従来例 。
+ \item 現状における問題点。
+\end{itemize}
+\end{hissu}
+
+\section{課題の設定と到達目標}
+\begin{hissu}
+個人の課題・到達目標がグループ内でどのような位置にあ
+るのかを明確にする。以下の順で説明するとわかりやすい。
+\begin{itemize}
+ \item グループが取組む課題の設定と到達目標。
+ \item 自分自身が取組む課題の設定と到達目標。
+\end{itemize}
+\end{hissu}
+
+\section{課題解決のプロセスとその結果}
+\begin{hissu}
+個人の課題を解決するためにどのような作業を行ったか？　創意工夫
+はあるか？　などを記述する。さらにそれらの作業で得られた結果・成
+果をわかりやすく説明する。図や表の利用を薦める。
+\end{hissu}
+\begin{table}[htbp]
+\begin{center}
+\caption{個人報告書の文字サイズ・文字数・行数}\label{tab:hoge}
+\begin{tabular}{ccc}
+\hline
+文字サイズ & 1行あたりの文字数& 行数\\
+\hline
+9ポイント  & 24--28文字       & 25--32行\\
+\hline
+\end{tabular} 
+\end{center} 
+\end{table}
+\begin{hissu}
+フォントサイズ、字送り、行送りなどは表~\ref{tab:hoge}の
+文字サイズ・文字数・行数に従うこと
+\end{hissu}
+
+\section{今後の課題}
+\begin{hissu}
+ 得られた結果・成果の不十分な点を指摘し、今
+ 後どのような作業を行うか記述する。
+\end{hissu}
+
+\begin{hissu}
+\begin{thebibliography}{10}
+\bibitem{YF2000}
+{\ruby{藤沢}{ふじさわ}}{\ruby{幸穂}{ゆきほ}}.
+\newblock H8マイコン完全マニュアル.
+\newblock オーム社, 2000.
+
+\bibitem{IH2001}
+{\ruby{英}{はなぶさ}}{\ruby{一太}{いちお}}.
+\newblock プリント配線基板の製造技術.
+\newblock CMC, 2001.
+
+\bibitem{TH1999}
+{\ruby{堀}{ほり}}{\ruby{敏夫}{としお}}.
+\newblock 電源回路の図式解析と設計法.
+\newblock 総合電子出版社, 1999.
+
+\bibitem{HH1980}
+{\ruby{福与}{ふくよ}}{\ruby{人八}{ひとひろ}},
+  {\ruby{小林}{こばやし}}{\ruby{肇}{はじめ}},
+  {\ruby{泊川}{とまりがわ}}{\ruby{一之}{かずゆき}}.
+\newblock 電子計測 改訂版.
+\newblock 実教出版, 1980.
+
+\bibitem{YI2003}
+{\ruby{市川}{いちかわ}}{\ruby{裕一}{ゆういち}},
+  {\ruby{青木}{あおき}}{\ruby{勝}{まさる}}.
+\newblock GHz時代の高周波回路設計.
+\newblock CQ出版, 2003.
+
+\bibitem{KI1989}
+{\ruby{伊藤}{いとう}}{\ruby{謹司}{きんし}}.
+\newblock プリント配線技術読本.
+\newblock 日刊工業新聞社, 1989.
+
+\bibitem{TK1995}
+{\ruby{加藤}{かとう}}{\ruby{肇}{ただし}},
+  {\ruby{見城}{けんじょう}}{\ruby{嵩志}{たかし}},
+  {\ruby{高橋}{たかはし}}{\ruby{久}{ひさし}}.
+\newblock 図解・わかる電子回路.
+\newblock 講談社, 1995.
+
+\bibitem{TK1993}
+{\ruby{小西}{こにし}}{\ruby{照郎}{てるお}}.
+\newblock 初級プリント回路技術者実力向上講座 (1) プリント回路設計.
+\newblock 日刊工業新聞社, 1993.
+
+\bibitem{KK2004}
+{\ruby{今野}{こんの}}{\ruby{金顕}{かねあき}}.
+\newblock マイコン技術教科書 H8編.
+\newblock CQ出版社, 2004.
+
+\bibitem{NK1994}
+{\ruby{畔柳}{くろやなぎ}}{\ruby{功芳}{のりよし}},
+  {\ruby{塩谷}{しおや}}{\ruby{光}{ひかる}}.
+\newblock 通信工学通論.
+\newblock コロナ社, 1994.
+
+\bibitem{NM1998}
+{\ruby{三上}{みかみ}}{\ruby{直樹}{なおき}}.
+\newblock デジタル信号処理の基礎.
+\newblock CQ出版社, 1998.
+
+\bibitem{SN1991}
+{\ruby{中村}{なかむら}}{\ruby{尚吾}{しょうご}}.
+\newblock デジタル信号処理.
+\newblock 東京電機大学出版局, 1991.
+
+\bibitem{NO2000}
+{\ruby{大澤}{おおさわ}}{\ruby{直}{ただし}}.
+\newblock はんだ付けの基礎と応用.
+\newblock 工業規格調査会, 2000.
+
+\bibitem{CQ1991}
+CQ出版.
+\newblock トランジスタ技術SPECIAL No.28.
+\newblock CQ出版社, 1991.
+
+\bibitem{IS1991}
+{\ruby{相良}{さがら}}{\ruby{岩男}{いわお}}.
+\newblock AD/DA変換回路入門.
+\newblock 日刊工業新聞社, 1991.
+
+\end{thebibliography}
+\end{hissu}
+
+\end{document}

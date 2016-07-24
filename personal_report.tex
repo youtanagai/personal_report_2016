@@ -1,0 +1,112 @@
+% 以下のコメントはよく読んだほうが良いと思います。
+\documentclass[twocolumn]{jsarticle}
+
+\usepackage{graphicx,color}%図版を取り込む場合は必要。
+\usepackage{okumacro}% 振り仮名を使用するときは必要。
+%
+\ifdraft
+  \def\hissu{\bgroup\color{red}}
+  \def\endhissu{\egroup}
+\else
+  \def\hissu{}
+  \def\endhissu{}
+\fi
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% ここから↓
+\pagestyle{empty}
+\advance\textheight\headheight \headheight=0pt
+\advance\textheight\headsep    \headsep=0pt
+\advance\textheight\footskip   \footskip=0pt
+\textheight=738truept
+\advance\textwidth\marginparsep \marginparsep=0pt
+\advance\textwidth\marginparwidth \marginparwidth=0pt
+\advance\textwidth\oddsidemargin \oddsidemargin=0pt
+\evensidemargin=\oddsidemargin
+\textwidth=50zw
+\advance\textwidth2zw
+\columnsep=2zw
+\topmargin=-5.4mm
+\oddsidemargin=-7.4mm
+\begin{document}
+\fontsize{10}{18}\selectfont
+% ↑ここまで変更しないほうが良いです。
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% ↓ここからが変更すべき箇所です。
+\twocolumn[%
+% 中間か最終かを記載する
+\noindent{個人報告書（中間）Personal Middle Report}
+% 個々に提出日を記入する
+   \hfill{提出日 (Date) 20016/07/26}\par\vskip2zw
+\begin{center}
+%日本語のプロジェクト名
+ {\LARGE 使ってもらって学ぶフィールド指向システム・デザイン}\par\vskip1zw
+%英語のプロジェクト名
+ {\LARGE Field Oriented System Design Learning by Users' Feedback}\par\vskip1.5zw
+%グループ名
+ {\large 町内会グループ (A)\quad Neighborhood Association Group (A)}\par\vskip1zw
+%学籍番号、日英の名前
+ {\large b1014120\quad 永井陽太\quad Yota Nagai}\par\vskip2zw
+\end{center}]%
+
+% \begin{hissu} ... \end{hissu} で囲まれている部分、
+% 必須項目でありますが、そのまま記述してはいけません。
+% 最終的には削除してもかまいませんが、コメントアウトして、
+% 原稿に残しておくと良いでしょう。
+% たとえば次のように。
+%\begin{hissu}
+%ここでグループが取組む課題の背景を簡略に記述する。
+%以下の項目を含む内容にすることが望ましい。
+%\begin{itemize}
+% \item 当該分野の現状や従来例 。
+% \item 現状における問題点。
+%\end{itemize}
+%\end{hissu}
+
+\input{background.tex}
+
+\input purpose.tex
+%\begin{hissu}
+%個人の課題・到達目標がグループ内でどのような位置にあ
+%るのかを明確にする。以下の順で説明するとわかりやすい。
+%\begin{itemize}
+% \item グループが取組む課題の設定と到達目標。
+% \item 自分自身が取組む課題の設定と到達目標。
+%\end{itemize}
+%\end{hissu}
+
+
+\input process.tex
+%\begin{hissu}
+%個人の課題を解決するためにどのような作業を行ったか？　創意工夫
+%はあるか？　などを記述する。さらにそれらの作業で得られた結果・成
+%果をわかりやすく説明する。図や表の利用を薦める。
+%\end{hissu}
+%\begin{table}[htbp]
+%\begin{center}
+%\caption{個人報告書の文字サイズ・文字数・行数}\label{tab:hoge}
+%\begin{tabular}{ccc}
+%\hline
+%文字サイズ & 1行あたりの文字数& 行数\\
+%\hline
+%9ポイント  & 24--28文字       & 25--32行\\
+%\hline
+%\end{tabular}
+%\end{center}
+%\end{table}
+%\begin{hissu}
+%フォントサイズ、字送り、行送りなどは表~\ref{tab:hoge}の
+%文字サイズ・文字数・行数に従うこと
+%\end{hissu}
+
+\input about_app.tex
+
+\input future_prospects.tex
+%\begin{hissu}
+% 得られた結果・成果の不十分な点を指摘し、今
+% 後どのような作業を行うか記述する。
+%\end{hissu}
+
+
+
+\end{document}
